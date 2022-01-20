@@ -1,0 +1,8 @@
+<ul>
+    <li><%= @app.appointment_datetime.to_formatted_s(:long).split.slice(0..2).join(" ") %></li>
+    <li><%= @app.appointment_datetime.to_formatted_s(:long).split.last.to_s %></li>
+    <li><%= link_to @app.patient.name, patient_path(@app.patient) %></li>
+    <li><%= link_to @app.doctor.name, doctor_path(@app.doctor) %></li>
+
+
+</ul>
